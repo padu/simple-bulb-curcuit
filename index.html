@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULB ON/OFF</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="circuit">
+            <div class="bulb"></div>
+            <div class="button"></div>
+        </div>
+    </div>
+    <script>
+        //immidiately invoked funtion expression (IIFE)
+        (function() {
+            const toggleLights = (bulb, button) => {
+                button.classList.toggle('button-off');
+                bulb.classList.toggle('bulb-off');
+            }
+
+            function activateCiruit() {
+                const button = document.querySelector('.button');
+                const bulb = document.querySelector('.bulb');
+
+                button.addEventListener('click', () => {
+                toggleLights(bulb, button)
+                });
+            }
+            activateCiruit();
+        })();
+
+    </script>
+</body>
+</html>
