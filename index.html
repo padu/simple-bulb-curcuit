@@ -11,7 +11,7 @@
     <div class="container">
         <div class="circuit">
             <div class="bulb"></div>
-            <div class="button"></div>
+
         </div>
     </div>
     <script>
@@ -27,12 +27,11 @@
                 const bulb = document.querySelector('.bulb');
 
                 button.addEventListener('click', () => {
-                toggleLights(bulb, button)
+                    toggleLights(bulb, button)
                 });
             }
             activateCiruit();
         })();
-
     </script>
 </body>
 </html>
